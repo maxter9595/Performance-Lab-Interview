@@ -1,3 +1,6 @@
+import sys
+
+
 def main(n: int, m: int) -> None:
     k = 1
     while True:
@@ -9,9 +12,7 @@ def main(n: int, m: int) -> None:
 
 
 if __name__ == '__main__':
-    print('Введите аргументы: n m (пример: 5 4)')
-    n_val, m_val = map(int, input().split())
     main(
-        n=n_val,
-        m=m_val
+        n=int(sys.argv[1]),
+        m=int(sys.argv[2])
     )

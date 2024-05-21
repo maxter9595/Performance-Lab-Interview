@@ -1,3 +1,6 @@
+import sys
+
+
 def read_numbers(file_path: str) -> list:
     with open(file_path) as file:
         nums = [int(line.strip()) for line in file]
@@ -23,8 +26,6 @@ def main(numbers_path: str) -> None:
 
 
 if __name__ == '__main__':
-    print('Введите путь к файлу c целыми числами (пример: numbers.txt)')
-    numbers_txt_path = input()
     main(
-        numbers_path=numbers_txt_path
+        numbers_path=sys.argv[1]
     )

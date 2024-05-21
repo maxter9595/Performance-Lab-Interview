@@ -1,3 +1,4 @@
+import sys
 import json
 
 
@@ -39,17 +40,8 @@ def main(tests_path: str, values_path: str, report_path: str) -> None:
 
 
 if __name__ == '__main__':
-    print('Введите путь к файлу с основными результатами теста',
-          '(пример: tests.json):')
-    tests_json_path = input()
-    print('Введите путь к файлу с информацией о значениях теста',
-          '(пример: values.json):')
-    values_json_path = input()
-    print('Введите путь к файлу для записи обновленных результатов теста',
-          '(пример: report.json):')
-    report_json_path = input()
     main(
-        tests_path=tests_json_path,
-        values_path=values_json_path,
-        report_path=report_json_path
+        tests_path=sys.argv[1],
+        values_path=sys.argv[2],
+        report_path=sys.argv[3]
     )

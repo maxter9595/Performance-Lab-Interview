@@ -1,3 +1,4 @@
+import sys
 import math
 
 
@@ -26,13 +27,7 @@ def main(circle_path: str, points_path: str) -> None:
 
 
 if __name__ == "__main__":
-    print('Введите путь к файлу с координатами и радиусом окружности',
-          '(пример: circle.txt)')
-    circle_txt_path = input()
-    print('Введите путь к файлу с координатами точек',
-          '(пример: dot.txt)')
-    points_txt_path = input()
     main(
-        circle_path=circle_txt_path,
-        points_path=points_txt_path
+        circle_path=sys.argv[1],
+        points_path=sys.argv[2]
     )
